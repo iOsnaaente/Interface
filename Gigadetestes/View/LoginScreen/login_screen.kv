@@ -1,0 +1,137 @@
+<LoginScreenView>    
+    
+    # Blur suave na tela de fundo para dar uma sensação aconchegante 
+    MDFloatLayout:
+        size_hint: 1.1, 1.1
+        pos_hint: {'center_x': 0.50,'top': 1.0 }
+        FrostedGlass:
+            id: FrostedBackground
+            overlay_color: app.colors.background
+            noise_opacity: 0.05
+            blur_size: 15
+            saturation: 1.2
+            luminosity: 1.3
+
+    # Logo ou nome da empresa 
+    MDFloatLayout:
+        id: ZagonelLogo
+        size_hint: 0.5, 0.2
+        pos_hint: {'center_x': 0.50, 'center_y': 0.750}
+        FrostedGlass:
+            radius: sp(50) 
+            size_hint: 1, 1
+            pos_hint: {'right': 1.0,'top': 1.0 }
+            overlay_color: app.colors.primary
+		    border_radius:  sp(self.radius), sp(self.radius), sp(self.radius), sp(self.radius)
+            noise_opacity: 0.1
+            blur_size: 15
+            saturation: 1.2
+            luminosity: 1.3
+        MDBoxLayout:
+            size_hint: 1, 1
+            pos_hint: {'right': 1.0,'top': 1.0 }
+            MDLabel:
+                text: "Zagonel"
+                color: app.colors.accent
+                font_size: sp(72) 
+                halign: 'center'
+
+    
+
+    # Área de login 
+    MDFloatLayout:
+        id: LoginFieldBox 
+        size_hint: 0.5, 0.15
+        pos_hint: {'center_x': 0.50,'center_y': 0.450}
+        MDBoxLayout:
+            size_hint: 0.8, 1.0
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}  
+            orientation: 'horizontal'
+            spacing: sp(10) 
+            MDTextField:
+                id: TextFieldInput
+                size_hint: 0.8, 0.60
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}    
+                halign: 'center'
+                valign: 'center'
+                icon_right_color_focused: app.colors.accent
+                line_color_focus: app.colors.accent
+                text_color_focus: app.colors.accent
+                max_text_length: 
+                    root.model.MAX_LEN_INPUT
+                on_text_validate: 
+                    root.controller.validate_input( ) 
+                on_text:
+                    root.controller.validate_input( )
+                    
+    MDLabel:
+        text: "Matricula"
+        size_hint: 1.0, 1.0
+        pos_hint: {'center_x': 0.5,'center_y': 0.40 }  
+        color: app.colors.accent
+        font_size: sp(24)
+        halign: 'center'
+
+
+
+    # Botão flutuante para correr sem login para a área Home 
+    MDFloatingActionButton:
+        id: InfoIcon
+        size_hint: None, None 
+        size: sp(50), sp(50)
+        pos_hint: {'center_x': 0.96,'center_y': 0.9250}
+        FrostedGlass:
+            id: FrostedInfoCard
+            radius: max(self.parent.size)/2
+            size_hint: 1, 1
+            pos_hint: {'right': 1.0,'top': 1.0 }
+            overlay_color: app.colors.primary
+            border_radius:  sp(self.radius), sp(self.radius), sp(self.radius), sp(self.radius)
+            noise_opacity: 0.075
+            blur_size: 15
+            saturation: 1.2
+            luminosity: 1.3
+        MDIconButton: 
+            icon: 'arrow-right-bold'
+            size: self.parent.size
+            pos_hint: {'center_x': 0.50,'center_y': 0.50}
+            color: app.colors.accent
+            on_press:
+                root.controller.go_to_home() 
+
+
+
+    # Footer da página
+    MDFloatLayout:
+        id: FooterLoginScreen
+        size_hint: 1.0, 0.035
+        pos_hint: {'center_x': 0.50,'top': self.size_hint[1] }
+        FrostedGlass:
+            id: FrostedInfoCard
+            size_hint: 1.1, 1.1
+            pos_hint: {'center_x': 0.50,'top': 1.0 }
+            overlay_color: app.colors.primary
+            noise_opacity: 0.075
+            blur_size: 15
+            saturation: 1.2
+            luminosity: 1.3
+        MDLabel:
+            text: "Zagonel®"
+            color: app.colors.accent
+            font_size: sp(12)
+            bold: True 
+            halign: 'left'
+            padding: sp(15), 0, 0, 0
+        MDLabel:
+            text: "Projeto Giga de Teste"
+            color: app.colors.accent
+            font_size: sp(12)
+            bold: True 
+            halign: 'center'
+        MDLabel:
+            text: "Bancada_XX - 2023"
+            color: app.colors.accent
+            font_size: sp(12)
+            bold: True 
+            halign: 'right'
+            padding: 0, 0, sp(15), 0
