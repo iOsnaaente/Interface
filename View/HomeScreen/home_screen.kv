@@ -9,13 +9,13 @@
         id: float_content
         size_hint: 1.1, 1.1
         pos_hint: {'center_x': 0.50,'top': 1.0 }
-        FrostedGlass:
-            id: FrostedBackground
-            overlay_color: app.colors.background
-            noise_opacity: 0.05
-            blur_size: 15
-            saturation: 1.2
-            luminosity: 1.3
+        # FrostedGlass:
+        #     id: FrostedBackground
+        #     overlay_color: app.colors.background
+        #     noise_opacity: 0.05
+        #     blur_size: 15
+        #     saturation: 1.2
+        #     luminosity: 1.3
         
     #
     # Title 
@@ -200,13 +200,13 @@
                 root.controller.hover_sign( self, 'IN' )
             on_leave:
                 root.controller.hover_sign( self, 'OUT' )
-            FrostedGlass:
-                overlay_color: self.parent.md_bg_color
-                noise_opacity: 0.05
-                blur_size: 15
-                saturation: 1.2
-                luminosity: 1.3
-                border_radius: self.parent.radius 
+            # FrostedGlass:
+            #     overlay_color: self.parent.md_bg_color
+            #     noise_opacity: 0.05
+            #     blur_size: 15
+            #     saturation: 1.2
+            #     luminosity: 1.3
+            #     border_radius: self.parent.radius 
         #
         # Operation sign
         MDCard: 
@@ -225,13 +225,13 @@
                 root.controller.hover_sign( self, 'IN' )
             on_leave:
                 root.controller.hover_sign( self, 'OUT' )
-            FrostedGlass:
-                overlay_color: self.parent.md_bg_color
-                noise_opacity: 0.05
-                blur_size: 15
-                saturation: 1.2
-                luminosity: 1.3
-                border_radius: self.parent.radius 
+            # FrostedGlass:
+            #     overlay_color: self.parent.md_bg_color
+            #     noise_opacity: 0.05
+            #     blur_size: 15
+            #     saturation: 1.2
+            #     luminosity: 1.3
+            #     border_radius: self.parent.radius 
         # 
         # Success sign 
         MDCard: 
@@ -250,11 +250,11 @@
                 root.controller.hover_sign( self, 'IN' )
             on_leave:
                 root.controller.hover_sign( self, 'OUT' )
-            FrostedGlass:
-                overlay_color: self.parent.md_bg_color
-                noise_opacity: 0.05
-                blur_size: 15
-                saturation: 1.2
-                luminosity: 1.3
-                border_radius: self.parent.radius 
+            # FrostedGlass:
+            #     overlay_color: self.parent.md_bg_color
+            #     noise_opacity: 0.05
+            #     blur_size: 15
+            #     saturation: 1.2
+            #     luminosity: 1.3
+            #     border_radius: self.parent.radius 
 

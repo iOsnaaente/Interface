@@ -19,7 +19,7 @@ Window.fullscreen = 'auto'
 
 
 # Debug 
-LOAD_SCREEN = 'home screen'
+LOAD_SCREEN = 'login screen'
 #
 
 

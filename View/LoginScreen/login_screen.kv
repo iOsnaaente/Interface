@@ -1,32 +1,45 @@
+##
+#   Por motivos de compatibilidade, fora comentado as partes
+#       que usavam o FrostedGlass. Quando a lib for instalada
+#       apropriadamente, dentro do Raspberry pi, pode-se retirar 
+#       os comentários para usar.
+#
+#   Além disso, pode-se retirar o 
+#       $ md_bg_color: app.colors.primary
+#       pois ele já esta incluso dentor do FrostedGlass 
+##
+
 <LoginScreenView>    
     
     # Blur suave na tela de fundo para dar uma sensação aconchegante 
     MDFloatLayout:
         size_hint: 1.1, 1.1
         pos_hint: {'center_x': 0.50,'top': 1.0 }
-        FrostedGlass:
-            id: FrostedBackground
-            overlay_color: app.colors.background
-            noise_opacity: 0.05
-            blur_size: 15
-            saturation: 1.2
-            luminosity: 1.3
+        # FrostedGlass:
+        #     id: FrostedBackground
+        #     overlay_color: app.colors.background
+        #     noise_opacity: 0.05
+        #     blur_size: 15
+        #     saturation: 1.2
+        #     luminosity: 1.3
 
     # Logo ou nome da empresa 
     MDFloatLayout:
         id: ZagonelLogo
         size_hint: 0.5, 0.2
         pos_hint: {'center_x': 0.50, 'center_y': 0.750}
-        FrostedGlass:
-            radius: sp(50) 
-            size_hint: 1, 1
-            pos_hint: {'right': 1.0,'top': 1.0 }
-            overlay_color: app.colors.primary
-		    border_radius:  sp(self.radius), sp(self.radius), sp(self.radius), sp(self.radius)
-            noise_opacity: 0.1
-            blur_size: 15
-            saturation: 1.2
-            luminosity: 1.3
+        md_bg_color: app.colors.primary
+        radius: sp(50)  
+        # FrostedGlass:
+        #     radius: sp(50) 
+        #     size_hint: 1, 1
+        #     pos_hint: {'right': 1.0,'top': 1.0 }
+        #     overlay_color: app.colors.primary
+		#     border_radius:  sp(self.radius), sp(self.radius), sp(self.radius), sp(self.radius)
+        #     noise_opacity: 0.1
+        #     blur_size: 15
+        #     saturation: 1.2
+        #     luminosity: 1.3
         MDBoxLayout:
             size_hint: 1, 1
             pos_hint: {'right': 1.0,'top': 1.0 }
@@ -80,17 +93,18 @@
         size_hint: None, None 
         size: sp(50), sp(50)
         pos_hint: {'center_x': 0.96,'center_y': 0.9250}
-        FrostedGlass:
-            id: FrostedInfoCard
-            radius: max(self.parent.size)/2
-            size_hint: 1, 1
-            pos_hint: {'right': 1.0,'top': 1.0 }
-            overlay_color: app.colors.primary
-            border_radius:  sp(self.radius), sp(self.radius), sp(self.radius), sp(self.radius)
-            noise_opacity: 0.075
-            blur_size: 15
-            saturation: 1.2
-            luminosity: 1.3
+        md_bg_color: app.colors.primary
+        # FrostedGlass:
+        #     id: FrostedInfoCard
+        #     radius: max(self.parent.size)/2
+        #     size_hint: 1, 1
+        #     pos_hint: {'right': 1.0,'top': 1.0 }
+        #     overlay_color: app.colors.primary
+        #     border_radius:  sp(self.radius), sp(self.radius), sp(self.radius), sp(self.radius)
+        #     noise_opacity: 0.075
+        #     blur_size: 15
+        #     saturation: 1.2
+        #     luminosity: 1.3
         MDIconButton: 
             icon: 'arrow-right-bold'
             size: self.parent.size
@@ -106,15 +120,16 @@
         id: FooterLoginScreen
         size_hint: 1.0, 0.035
         pos_hint: {'center_x': 0.50,'top': self.size_hint[1] }
-        FrostedGlass:
-            id: FrostedInfoCard
-            size_hint: 1.1, 1.1
-            pos_hint: {'center_x': 0.50,'top': 1.0 }
-            overlay_color: app.colors.primary
-            noise_opacity: 0.075
-            blur_size: 15
-            saturation: 1.2
-            luminosity: 1.3
+        md_bg_color: app.colors.primary
+        # FrostedGlass:
+        #     id: FrostedInfoCard
+        #     size_hint: 1.1, 1.1
+        #     pos_hint: {'center_x': 0.50,'top': 1.0 }
+        #     overlay_color: app.colors.primary
+        #     noise_opacity: 0.075
+        #     blur_size: 15
+        #     saturation: 1.2
+        #     luminosity: 1.3
         MDLabel:
             text: "Zagonel®"
             color: app.colors.accent
