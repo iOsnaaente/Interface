@@ -1,4 +1,4 @@
-from kivygo.uix.frostedglass import FrostedGlass
+#from kivygo.uix.frostedglass import FrostedGlass
 from View.base_screen import BaseScreenView
 from kivy.clock import Clock 
 
