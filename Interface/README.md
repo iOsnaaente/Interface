@@ -33,6 +33,7 @@ $ hid_%(name)s = probesysfs,provider=hidinput
 ```
 
 ### to build .exe with buildozer 
+under construction 
 
 
 
