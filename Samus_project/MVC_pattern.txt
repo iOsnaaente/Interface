@@ -1,0 +1,8 @@
+kivymd.tools.patterns.create_project \
+    name_pattern \
+    path_to_project \
+    name_project \
+    python_version \
+    kivy_version \
+    --use_hotreload yes \
+    --name_screen LoginScreen HomeScreen

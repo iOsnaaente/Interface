@@ -7,7 +7,6 @@ inputs = 'A12345678A'
 # print( re.match( PATTERN, inputs ) is not None )
 
 
-
 class StateMachine: 
     ''' Definição das máquinas de estado com o Rasp
     '''

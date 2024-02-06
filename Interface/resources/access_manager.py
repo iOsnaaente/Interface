@@ -3,8 +3,6 @@ import sqlite3
 import json 
 import os 
 
-
-
 PATH = os.path.dirname( __file__ )
 
 class Database:

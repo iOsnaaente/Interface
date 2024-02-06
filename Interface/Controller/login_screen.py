@@ -35,14 +35,14 @@ class LoginScreenController:
             self.go_to_home()
         else:
             print( f'INPUT INVÁLIDO: {textInput.text}' )
-            Clock.schedule_once( self.set_text_field_focus, 0.1 )
+            # Clock.schedule_once( self.set_text_field_focus, 0.1 )
 
 
     # Setar o foco do Text Field 
     def set_text_field_focus( self, event = None ):
-        self.get_view().ids.TextFieldInput.focus = True
-        self.get_view().ids.TextFieldInput.text = ''
-    
+        textInput = self.get_view().ids.TextFieldInput
+        textInput.focus = True
+        textInput.text = ''
 
     # Cria um efeito de hover mudando o frostItem noise 
     def hover_info( self, state : str ):

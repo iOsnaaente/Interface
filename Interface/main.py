@@ -1,6 +1,8 @@
 from kivymd.uix.screenmanager import MDScreenManager
 from kivy.uix.screenmanager import WipeTransition
+
 from kivymd.tools.hotreload.app import MDApp
+
 from kivy.utils import rgba, QueryDict 
 
 from screeninfo import get_monitors
@@ -33,10 +35,13 @@ class Gigadetestes( MDApp ):
     # Cores 
     colors = QueryDict() 
     colors.background    = rgba( "#E8F8E8F0" )
+    
     colors.primary       = rgba( "#4AD66DF0" )
     colors.primary_HUE   = rgba( "#4AD66D50" )
+    
     colors.accent        = rgba( "#10451DFF" )
     colors.hint          = rgba( "#888888FF" )
+
     colors.error         = rgba( "#FF5449FF" )
     colors.warning       = rgba( "#F87F29FF" )
     colors.success       = rgba( "#4AD66DFF" )
