@@ -2,7 +2,7 @@ from View.HomeScreen.components.common_peripherals import CommonPeripheral
 from kivymd.uix.card import MDCard 
 import os 
 
-class RaspberryContent( CommonPeripheral ):
+class PowerRelayContent( CommonPeripheral ):
     routine = None 
     grid = None 
 
@@ -12,9 +12,10 @@ class RaspberryContent( CommonPeripheral ):
         super().__init__(*args, **kwargs)
 
     def on_kv_post( self, *arg, **kw ):
-        self.ids.title.text = "Raspberry Pi"
-        self.ids.description.text = "Por ser o microprocessador do sistema, o Raspeberry Pi possui funções importantes a serem considaradas, ..... CONTINUAR "
-        self.ids.image.source = self.img_path(  os.path.join('comp', 'comp_raspy_top.png') )
+        self.ids.title.text = "Power Relay"
+        self.ids.description.text = " "
+        self.ids.image.source = self.img_path(  os.path.join('comp', 'comp_power_relay.png') )
+        self.ids.image.angle = 90
         self.ids.peripheral_content.size_hint = [1, 0.75]
         self.ids.peripheral_content.add_widget(
             MDCard(

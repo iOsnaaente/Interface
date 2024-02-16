@@ -15,7 +15,7 @@ Window.left = monitor.x
 Window.top = monitor.y + 25
 
 # Inicia em modo Tela Cheia 
-Window.fullscreen = 'auto'
+Window.fullscreen = 'auto' 
 
 import importlib
 import os 

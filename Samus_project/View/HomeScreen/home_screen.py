@@ -8,7 +8,11 @@ import os
 from View.HomeScreen.components.raspberry_content import RaspberryContent 
 from View.HomeScreen.components.gpio_out_content import GPIOOUTContent  
 from View.HomeScreen.components.gpio_in_content import GPIOINContent 
-from View.HomeScreen.components.relays_out import RelayOUTContent 
+from View.HomeScreen.components.power_meter import PowerMeterContent 
+from View.HomeScreen.components.power_relay import PowerRelayContent 
+from View.HomeScreen.components.relays_out import RelayContent 
+from View.HomeScreen.components.led_rgb import LedRGBContent 
+
 
 
 img_path =  lambda file_name: os.path.join( os.path.dirname(__file__).removesuffix( '\\View\\HomeScreen'), 'assets', 'images', file_name if type(file_name) == str else str(file_name) )
@@ -59,15 +63,21 @@ class HomeScreenView( BaseScreenView, SwipeScreen ):
         obj = self.ids.main_content 
         for chl in obj.children:
             obj.remove_widget( chl )
-
+        print( self.selection_option )
         if self.selection_option == 'RASPBERRY':
             widget = RaspberryContent()
+        elif self.selection_option == 'RELAY OUT':
+            widget = RelayContent( relay_list = [1, 2, 3] )
         elif self.selection_option == 'GPIO OUT':
             widget = GPIOOUTContent( [1, 2, 3, 4] )
+        elif self.selection_option == 'LED RGB':
+            widget = LedRGBContent( gpio_list = [ 1, 2, 3] ) 
         elif self.selection_option == 'GPIO IN':
-            widget = GPIOINContent( [1, 2, 3] )
-        elif self.selection_option == 'GPIO IN':
-            widget = GPIOINContent( [1, 2, 3] )
+            widget = GPIOINContent( gpio_list = [1, 2, 3] )
+        elif self.selection_option == 'POWER SENSOR':
+            widget = PowerMeterContent() 
+        elif self.selection_option == 'POWER RELAY':
+            widget = PowerRelayContent( gpio_list = [ 1, 2 ] ) 
         else: 
             return 
         self.ids.main_content.add_widget( widget )

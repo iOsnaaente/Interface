@@ -73,13 +73,13 @@
             md_bg_color: root.relays_out_color
             on_touch_down: root.clicked( self, True ) if self.collide_point( *args[1].pos ) else root.clicked( self, False ) 
 
-        MDCard:
-            id: board_connector_power_input
-            name: 'POWER IN'
-            size_hint: 0.15, 0.3
-            pos_hint: {'right': 0.995,'top': 0.925}
-            md_bg_color: root.relays_power_in_color
-            on_touch_down: root.clicked( self, True ) if self.collide_point( *args[1].pos ) else root.clicked( self, False ) 
+        # MDCard:
+        #     id: board_connector_power_input
+        #     name: 'POWER IN'
+        #     size_hint: 0.15, 0.3
+        #     pos_hint: {'right': 0.995,'top': 0.925}
+        #     md_bg_color: root.relays_power_in_color
+        #     on_touch_down: root.clicked( self, True ) if self.collide_point( *args[1].pos ) else root.clicked( self, False ) 
 
         MDCard:
             id: board_raspberry_bottom    
